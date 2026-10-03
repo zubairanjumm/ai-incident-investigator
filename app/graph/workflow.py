@@ -56,8 +56,10 @@ def correlate_events_node(state: InvestigationState):
 
 def generate_hypotheses_node(state: InvestigationState):
     hypotheses = generate_hypotheses(
+        state["incident_description"],
         state["patterns"],
         state["correlations"],
+             
     )
 
     return {
